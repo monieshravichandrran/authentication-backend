@@ -13,6 +13,7 @@ app.use(express.json());
 app.use(cors());
 app.use(express.urlencoded({extended: true}));
 
+mongoose.set("strictQuery", false);
 mongoose.connect(process.env.MONGOOSE_URL,{
     useNewUrlParser: true,
     useUnifiedTopology: true
